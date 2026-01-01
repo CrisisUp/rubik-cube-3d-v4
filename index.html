@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Interactive Rubik's Cube - Modular</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <div class="status-bar">
+        <h1>3D Rubik's Cube</h1>
+        <div id="status-text">Pronto</div>
+    </div>
+
+    <div id="ui-container">
+        <div class="panel">
+            
+            <div class="control-row">
+                <button id="btn-shuffle" class="btn-action btn-shuffle">Embaralhar</button>
+                <button id="btn-solve" class="btn-action btn-solve" disabled>Resolver Auto</button>
+            </div>
+
+            <div class="control-group" style="margin-left: auto;">
+                <button id="zoom-out">−</button>
+                <span class="label">Zoom</span>
+                <button id="zoom-in">+</button>
+            </div>
+
+            <div class="control-row">
+                <div class="control-group">
+                    <span class="label">Eixo X</span>
+                    <button class="btn-move" data-move="R">R</button>
+                    <button class="btn-move" data-move="R'">R'</button>
+                    <button class="btn-move" data-move="L">L</button>
+                    <button class="btn-move" data-move="L'">L'</button>
+                </div>
+                <div class="control-group">
+                    <span class="label">Eixo Y</span>
+                    <button class="btn-move" data-move="U">U</button>
+                    <button class="btn-move" data-move="U'">U'</button>
+                    <button class="btn-move" data-move="D">D</button>
+                    <button class="btn-move" data-move="D'">D'</button>
+                </div>
+                <div class="control-group">
+                    <span class="label">Eixo Z</span>
+                    <button class="btn-move" data-move="F">F</button>
+                    <button class="btn-move" data-move="F'">F'</button>
+                    <button class="btn-move" data-move="B">B</button>
+                    <button class="btn-move" data-move="B'">B'</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
