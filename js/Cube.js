@@ -93,7 +93,7 @@ export class Cube {
                 onComplete: () => {
                     this.pivot.updateMatrixWorld();
                     activeCubies.forEach(c => {
-                        this.group.attach(c); // Re-anexa ao grupo
+                        this.scene.attach(c);
                         // Ajuste de precisão para evitar drift
                         ['x','y','z'].forEach(a => c.position[a] = Math.round(c.position[a] * 100) / 100);
                         const e = new THREE.Euler().setFromQuaternion(c.quaternion);
