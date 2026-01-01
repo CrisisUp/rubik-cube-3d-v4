@@ -9,10 +9,7 @@ export class Cube {
         this.moveHistory = [];
         this.isAnimating = false;
         this.pivot = new THREE.Object3D();
-        this.group = new THREE.Group(); // Grupo para conter todos os cubies
-        this.group.position.y = 0.6; // Eleva o cubo
         this.scene.add(this.pivot);
-        this.scene.add(this.group);
         this._build();
     }
 
