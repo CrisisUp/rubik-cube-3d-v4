@@ -33,7 +33,7 @@ export class Cube {
                     const cubie = new THREE.Mesh(geom, mats);
                     const off = Config.CUBE_SIZE + Config.SPACING;
                     cubie.position.set(x * off, y * off, z * off);
-                    this.group.add(cubie); // Adiciona ao grupo
+                    this.scene.add(cubie); 
                     this.allCubies.push(cubie);
                 }
             }
